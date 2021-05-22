@@ -4,55 +4,50 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
 public class Message {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private int user_id;
+    private Date time;
+    private String message;
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
-    public String getFrom() {
-        return from;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getTime() {
+        return time;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setTime(Date time) {
+        this.time = time;
     }
 
-    public String getBody() {
-        return body;
+    public String getMessage() {
+        return message;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    @javax.persistence.Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
-    private int Id;
-    @NotNull
-    private String from;
-    @NotNull
-    private Date date;
-    @NotNull
-    private String body;
 
 
 }
