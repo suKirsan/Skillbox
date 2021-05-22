@@ -1,3 +1,10 @@
+GET /api/auth
+Запрос: -
+
+Ответ: {
+    "result": true
+}
+
 GET /api/users — получение списка пользователей
 
 Запрос: —
@@ -5,12 +12,12 @@ GET /api/users — получение списка пользователей
 Ответ: {
     "users": [
         {
-            "id": 4732,
-            "name": "Дмитрий Петров"
+            "id": 1,
+            "name": "User1"
         },
         {
-            "id": 3273,
-            "name": "Алексей Дмитриев"
+            "id": 2,
+            "name": "User2"
         }
     ]
 }
@@ -22,15 +29,14 @@ GET /api/messages — получение списка сообщений
 
 Ответ: {
     "messages": [
-    {
-        "id": 6588
-        "time": 1234567890
-        "from_user": "Имя Фамилия"
-        "body": "some text from user"
+        {
+            "id": 12,
+            "name": "User1",
+            "time": "00:00 01.01.2021",
+            "body": "body"
+        },
 
-    }
     ]
-
 }
 
 POST /api/messages — отправка сообщения
@@ -46,11 +52,10 @@ POST /api/messages — отправка сообщения
 POST /api/users — создание пользователя при логине
 
 Запрос:
-- username
 
-Ответ:
-"user" :[
-"user_id": 1234
-"status": added/ already exist
-]
+- name - имя пользователя
+
+Ответ: {
+    "result": true
+}
 
