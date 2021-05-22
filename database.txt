@@ -1,0 +1,14 @@
+user
+
+- id INT NOT NULL AUTO_INCREMENT
+- reg_time DATETIME NOT NULL
+- session_id VARCHAR(255) NOT NULL
+- name VARCHAR(255) NOT NULL
+
+message
+
+- message_id INT NOT NULL AUTO_INCREMENT
+- message_from VARCHAR(255) NOT NULL
+- message_to VARCHAR(255) NOT NULL
+- message_date DATETIME NOT NULL
+- message_body TEXT NOT NULL
