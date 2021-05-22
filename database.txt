@@ -9,6 +9,5 @@ message
 
 - message_id INT NOT NULL AUTO_INCREMENT
 - message_from VARCHAR(255) NOT NULL
-- message_to VARCHAR(255) NOT NULL
 - message_date DATETIME NOT NULL
 - message_body TEXT NOT NULL
